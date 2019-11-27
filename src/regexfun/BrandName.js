@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./BrandName.css";
 
 export default class BrandName extends Component {
   state = {
@@ -31,17 +32,21 @@ export default class BrandName extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <input
-            value={this.state.input}
-            type="text"
-            name="input"
-            onChange={this.handleChange}
-          ></input>
-          <button>hip it!</button>
-        </form>
-        <h1>{this.state.output}</h1>
+      <div className="brand-main">
+        <div className="input-form">
+          <form onSubmit={this.handleSubmit}>
+            <input
+              value={this.state.input}
+              type="text"
+              name="input"
+              onChange={this.handleChange}
+            ></input>
+            <button>HIP IT!</button>
+          </form>
+        </div>
+        <div className="display">
+          <h1>{this.state.output}</h1>
+        </div>
       </div>
     );
   }
