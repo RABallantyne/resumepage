@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import TriviaAnswers from "./TriviaAnswers";
+import "./Trivia.css";
 
 export default class TriviaMain extends Component {
   state = {
@@ -56,7 +57,8 @@ export default class TriviaMain extends Component {
     } else {
       this.setState({
         showAnswer: true,
-        answered: false
+        answered: false,
+        points: this.state.points - 2
       });
     }
     setTimeout(() => {
@@ -66,9 +68,12 @@ export default class TriviaMain extends Component {
 
   render() {
     return (
-      <div>
+      <div className="trivia-container">
         {this.state.showAnswer ? (
-          <h3>wrong! the correct answer is {this.state.correctAnswer}</h3>
+          <h3>
+            wrong! the correct answer is {this.state.correctAnswer}, you lose 2
+            points.
+          </h3>
         ) : null}
         {!this.state.showAnswer && this.state.answered ? (
           <h3>Correct! You get 5 points!</h3>

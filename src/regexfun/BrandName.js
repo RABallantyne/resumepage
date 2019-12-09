@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./BrandName.css";
-
+import HipDisplay from "./HipDisplay";
 export default class BrandName extends Component {
   state = {
     input: "",
@@ -8,10 +8,13 @@ export default class BrandName extends Component {
   };
 
   hip = input => {
-    let capped = input.toUpperCase().replace(/[AEIOU]/gi, "");
-    let cappedDashed = capped.replace(/\s/g, " - ");
+    let formatted = input
+      .toUpperCase()
+      .replace(/[AEIOU]/gi, "")
+      .split(/[ ,]+/);
+    let allBoxes = formatted.map(group => group.split(""));
     this.setState({
-      output: cappedDashed
+      output: allBoxes
     });
   };
 
@@ -33,6 +36,10 @@ export default class BrandName extends Component {
   render() {
     return (
       <div className="brand-main">
+        <h1>
+          Create your brand! Enter your name (or whatever text you like) and
+          I'll make it hip for you...
+        </h1>
         <div className="input-form">
           <form onSubmit={this.handleSubmit}>
             <input
@@ -41,12 +48,13 @@ export default class BrandName extends Component {
               name="input"
               onChange={this.handleChange}
             ></input>
-            <button>HIP IT!</button>
+            <button onClick={this.handleSubmit}>HIP IT!</button>
           </form>
         </div>
-        <div className="display">
-          <h1>{this.state.output}</h1>
-        </div>
+
+        {this.state.output.length > 0 ? (
+          <HipDisplay input={this.state.output} />
+        ) : null}
       </div>
     );
   }
