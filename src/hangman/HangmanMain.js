@@ -68,7 +68,7 @@ export default class HangmanMain extends Component {
 
   render() {
     return (
-      <div>
+      <div className="hang-container">
         <h1>NERD HANGMAN!</h1>
         {this.state.winner ? <h1>You WIN!</h1> : null}
         {this.state.wrongGuesses.length === 6 ? (
@@ -91,13 +91,11 @@ export default class HangmanMain extends Component {
             />
           </>
         )}
-        <div>
-          <h3>
-            on the count of 6 the thing melts...{" "}
-            {this.state.wrongGuesses.length}
-          </h3>
-          <button onClick={() => this.newGame()}>New Game?</button>
-        </div>
+
+        <h3>
+          on the count of 6 the thing melts... {this.state.wrongGuesses.length}
+        </h3>
+        <button onClick={() => this.newGame()}>New Game?</button>
       </div>
     );
   }

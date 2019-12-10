@@ -1,15 +1,23 @@
 .letters {
-  color: red;
-  background-color: black;
-  margin: auto;
+  color: rgb(23, 27, 41);
+  background-color: rgb(116, 138, 150);
+  text-align: center;
   padding: 2px;
   width: 30px;
+  margin: 2px;
 }
 .lettersDisplay {
   display: flex;
   flex-wrap: wrap;
   padding: 30px;
-  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+.hang-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 div[disabled] {
   text-decoration: line-through;
@@ -44,5 +52,8 @@ span.visible {
 }
 
 .display {
-  padding: 20px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* justify-content: center; */
 }

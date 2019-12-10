@@ -2,7 +2,6 @@
 
 .nav {
   display: flex;
-  /* width: 20%; */
   padding: 10px;
 }
 button {
@@ -32,6 +31,23 @@ button {
   );
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .nav-container-s {
+    font-family: "Oswald", sans-serif;
+    background-color: grey;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 78px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(124, 156, 164);
+  }
+}
+
 .title {
   align-self: center;
   margin: 5px;
@@ -39,7 +55,6 @@ button {
 
 .game-container {
   background-color: rgb(208, 217, 219, 1);
-
   margin-top: 78px;
   overflow: scroll;
   height: 100vh;

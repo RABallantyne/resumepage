@@ -20,7 +20,7 @@ export default class Main extends Component {
   render() {
     return (
       <>
-        <header className="nav-container">
+        <header className="nav-container nav-container-s">
           <h2 className="title">Rob Ballantyne</h2>
           <nav className="nav">
             <button value="trivia" onClick={this.handleSubmit}>
