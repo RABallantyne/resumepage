@@ -137,8 +137,8 @@ export default function Resume() {
             + Designed and styled for a simply user experience using custom Css.
           </p>
           <p>
-            + Allows for unlimited teams and rounds, which can be added at any
-            time.
+            + Dynamically coded to allow for unlimited teams and rounds, which
+            can be added at any time.
           </p>
           <p>+ Developed as a client side SPA that can be used offline.</p>
         </div>
