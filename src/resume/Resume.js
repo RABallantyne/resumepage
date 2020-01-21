@@ -1,25 +1,34 @@
 import React from "react";
 import "./resume.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 
 export default function Resume() {
   return (
     <div className="resume-container">
       <div className="section-title">
-        <div className="title-content">
-          <h5>713.419.0016</h5>
+        <div className="header-content">
           <a
             href="mailto:RABallantyne@gmail.com"
             rel="noopener noreferrer"
             target="_blank"
           >
-            RABallantyne@gmail.com
+            <FontAwesomeIcon icon={faEnvelopeSquare} size={"2x"} />
           </a>
           <a
             href="https://github.com/RABallantyne/"
             rel="noopener noreferrer"
             target="_blank"
           >
-            Github
+            <FontAwesomeIcon icon={faGithub} size={"2x"} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/rob-ballantyne-73b66b45/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <FontAwesomeIcon icon={faLinkedin} size={"2x"} />
           </a>
         </div>
       </div>
