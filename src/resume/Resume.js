@@ -4,6 +4,25 @@ import "./resume.css";
 export default function Resume() {
   return (
     <div className="resume-container">
+      <div className="section-title">
+        <div className="title-content">
+          <h5>713.419.0016</h5>
+          <a
+            href="mailto:RABallantyne@gmail.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            RABallantyne@gmail.com
+          </a>
+          <a
+            href="https://github.com/RABallantyne/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Github
+          </a>
+        </div>
+      </div>
       <div className="overview">
         <p>
           Full stack web developer with a passion for solving real world
@@ -21,7 +40,7 @@ export default function Resume() {
       <div className="info-section">
         <div className="info-header">
           <span className="info-title">BarBack</span>{" "}
-          <span>React | NodeJS</span>
+          <span>React | NodeJS |</span>
           <span>
             <a
               href="https://github.com/RABallantyne/barback-frontend"
@@ -31,6 +50,7 @@ export default function Resume() {
               Github
             </a>
           </span>
+          |
           <span>
             <a
               href="https://github.com/RABallantyne/bar-back-api"
@@ -38,6 +58,16 @@ export default function Resume() {
               target="_blank"
             >
               API
+            </a>
+          </span>
+          |
+          <span>
+            <a
+              href="https://barback-app-1489b.firebaseapp.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Link
             </a>
           </span>
           <p>
@@ -66,6 +96,42 @@ export default function Resume() {
             + Implemented asynchronous CRUD actions for bars, menus, drinks, and
             ingredients.
           </p>
+        </div>
+      </div>
+
+      <div className="info-section">
+        <div className="info-header">
+          <span className="info-title">ScoreKeeper</span> <span>React |</span>
+          <span>
+            <a
+              href="https://github.com/RABallantyne/score-keeper"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Github
+            </a>
+          </span>
+          |
+          <span>
+            <a
+              href="https://scorekeeper-6cffd.firebaseapp.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Link
+            </a>
+          </span>
+          <p>Versatile App used for keeping score in any game. </p>
+        </div>
+        <div className="info-points">
+          <p>
+            + Designed and styled for a simply user experience using custom Css.
+          </p>
+          <p>
+            + Allows for unlimited teams and rounds, which can be added at any
+            time.
+          </p>
+          <p>+ Developed as a client side SPA that can be used offline.</p>
         </div>
       </div>
       {/* RECORD SMART */}
@@ -105,33 +171,6 @@ export default function Resume() {
       </div>
 
       {/* TreeFIND */}
-
-      <div className="info-section">
-        <div className="info-header">
-          <span className="info-title">TreeFind</span> <span>Ruby </span>
-          <span>
-            <a
-              href="https://github.com/lukemenard/TreeFind"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Github
-            </a>
-          </span>
-          <p>Ruby CLI app for identifying trees based on a leaf sample.</p>
-        </div>
-        <div className="info-points">
-          <p>+ Created a robust app utilizing only Ruby.</p>
-          <p>
-            + Used a variety of gems to create a user friendly CLI experience
-            including option menus and pictures.
-          </p>
-          <p>
-            + Developed complex logic to narrow down from over 30 tree species
-            commonly found in Colorado.
-          </p>
-        </div>
-      </div>
 
       <div className="section-title">
         <div className="title-content">TECHNICAL SKILLS</div>
