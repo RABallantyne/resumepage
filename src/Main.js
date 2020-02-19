@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import HangmanMain from "./hangman/HangmanMain";
-import TriviaMain from "./trivia/TriviaMain";
-import BrandName from "./regexfun/BrandName";
-import Resume from "./resume/Resume";
-import "./Main.css";
+import React, { Component } from 'react';
+import HangmanMain from './hangman/HangmanMain';
+import TriviaMain from './trivia/TriviaMain';
+import BrandName from './regexfun/BrandName';
+import Resume from './resume/Resume';
+import './Main.css';
 
 export default class Main extends Component {
   state = {
-    selection: "resume"
+    selection: 'resume'
   };
 
   handleSubmit = event => {
@@ -20,28 +20,34 @@ export default class Main extends Component {
   render() {
     return (
       <>
-        <header className="nav-container nav-container-s">
-          <h2 className="title">Rob Ballantyne</h2>
-          <nav className="nav">
-            <button value="trivia" onClick={this.handleSubmit}>
+        <header className='nav-container nav-container-s'>
+          <h2 className='title'>Rob Ballantyne</h2>
+          <nav className='nav'>
+            <button value='trivia' onClick={this.handleSubmit}>
               TRIVIA
             </button>
-            <button value="brand" onClick={this.handleSubmit}>
+            <button value='brand' onClick={this.handleSubmit}>
               BRAND
             </button>
-            <button value="hangman" onClick={this.handleSubmit}>
+            <button value='hangman' onClick={this.handleSubmit}>
               HANGMAN
             </button>
-            <button value="resume" onClick={this.handleSubmit}>
+            <button value='resume' onClick={this.handleSubmit}>
               HOME
             </button>
           </nav>
         </header>
-        <div className="game-container">
-          {this.state.selection === "brand" ? <BrandName /> : null}
-          {this.state.selection === "trivia" ? <TriviaMain /> : null}
-          {this.state.selection === "hangman" ? <HangmanMain /> : null}
-          {this.state.selection === "resume" ? <Resume /> : null}
+        <div className='game-container'>
+          <h1>
+            {' '}
+            <a href='https://raballantyne-portfolio.firebaseapp.com'>
+              Click here to view my updated portfolio.
+            </a>
+          </h1>
+          {this.state.selection === 'brand' ? <BrandName /> : null}
+          {this.state.selection === 'trivia' ? <TriviaMain /> : null}
+          {this.state.selection === 'hangman' ? <HangmanMain /> : null}
+          {this.state.selection === 'resume' ? <Resume /> : null}
         </div>
       </>
     );

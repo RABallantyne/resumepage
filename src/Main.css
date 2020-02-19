@@ -1,18 +1,18 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald:400,500,600,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,500,600,700&display=swap');
 
 .nav {
   display: flex;
   padding: 10px;
 }
 button {
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   padding: px;
   margin: 2px;
   width: 90px;
 }
 
 .nav-container {
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   background-color: grey;
   display: flex;
   justify-content: space-between;
@@ -34,7 +34,7 @@ button {
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .nav-container-s {
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
     background-color: grey;
     display: flex;
     flex-wrap: wrap;
@@ -58,4 +58,14 @@ button {
   margin-top: 78px;
   overflow: scroll;
   height: 100vh;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+
+  color: black;
 }
